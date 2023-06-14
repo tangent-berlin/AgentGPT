@@ -6,8 +6,8 @@ export const generateEnv = (envValues) => {
     let isDockerCompose = envValues.runOption === "docker-compose";
     let dbPort = isDockerCompose ? 3307 : 3306;
     let platformUrl = isDockerCompose
-        ? "http://host.docker.internal:8000"
-        : "http://localhost:8000";
+        ? "http://host.docker.internal:8002"
+        : "http://localhost:8002";
 
     const envDefinition = getEnvDefinition(
         envValues,
@@ -27,12 +27,12 @@ const getEnvDefinition = (envValues, isDockerCompose, dbPort, platformUrl) => {
             NEXT_PUBLIC_VERCEL_ENV: "${NODE_ENV}",
         },
         NextJS: {
-            NEXT_PUBLIC_BACKEND_URL: "http://localhost:8000",
+            NEXT_PUBLIC_BACKEND_URL: "http://localhost:8002",
             NEXT_PUBLIC_MAX_LOOPS: 25,
         },
         "Next Auth config": {
             NEXTAUTH_SECRET: generateAuthSecret(),
-            NEXTAUTH_URL: "http://localhost:3000",
+            NEXTAUTH_URL: "http://localhost:3002",
         },
         "Auth providers (Use if you want to get out of development mode sign-in)": {
             GOOGLE_CLIENT_ID: "***",
@@ -48,7 +48,7 @@ const getEnvDefinition = (envValues, isDockerCompose, dbPort, platformUrl) => {
             REWORKD_PLATFORM_MAX_LOOPS: "${NEXT_PUBLIC_MAX_LOOPS}",
             REWORKD_PLATFORM_OPENAI_API_KEY:
                 envValues.OpenAIApiKey || '"<change me>"',
-            REWORKD_PLATFORM_FRONTEND_URL: "http://localhost:3000",
+            REWORKD_PLATFORM_FRONTEND_URL: "http://localhost:3002",
             REWORKD_PLATFORM_RELOAD: true,
             REWORKD_PLATFORM_OPENAI_API_BASE: "https://api.openai.com/v1",
             REWORKD_PLATFORM_SERP_API_KEY: envValues.serpApiKey || '""',

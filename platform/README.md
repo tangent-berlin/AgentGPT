@@ -18,7 +18,7 @@ This will start the server on the configured host.
 
 You can find swagger documentation at `/api/docs`.
 
-You can read more about poetry here: https://python-poetry.org/
+You can read more about poetry here: <https://python-poetry.org/>
 
 ## Docker
 
@@ -82,11 +82,11 @@ An example of .env file:
 
 ```bash
 REWORKD_PLATFORM_RELOAD="True"
-REWORKD_PLATFORM_PORT="8000"
+REWORKD_PLATFORM_PORT="8002"
 REWORKD_PLATFORM_ENVIRONMENT="development"
 ```
 
-You can read more about BaseSettings class here: https://pydantic-docs.helpmanual.io/usage/settings/
+You can read more about BaseSettings class here: <https://pydantic-docs.helpmanual.io/usage/settings/>
 
 ## Pre-commit
 
@@ -106,7 +106,7 @@ By default it runs:
 * isort (sorts imports in all files);
 * flake8 (spots possibe bugs);
 
-You can read more about pre-commit here: https://pre-commit.com/
+You can read more about pre-commit here: <https://pre-commit.com/>
 
 ## Running tests
 

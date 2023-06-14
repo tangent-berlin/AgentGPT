@@ -1,1 +1,1 @@
-stripe listen --forward-to localhost:3000/api/webhooks/stripe
+stripe listen --forward-to localhost:3002/api/webhooks/stripe

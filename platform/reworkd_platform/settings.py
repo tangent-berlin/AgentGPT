@@ -29,7 +29,7 @@ class Settings(BaseSettings):
     """
 
     host: str = "127.0.0.1"
-    port: int = 8000
+    port: int = 8002
 
     # Quantity of workers for uvicorn
     workers_count: int = 1
@@ -51,7 +51,7 @@ class Settings(BaseSettings):
     serp_api_key: Optional[str] = None
 
     # Frontend URL for CORS
-    frontend_url: str = "http://localhost:3000"
+    frontend_url: str = "http://localhost:3002"
 
     # Variables for the database
     db_host: str = "localhost"
